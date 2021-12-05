@@ -9,6 +9,7 @@ body {
     font-family: "Poppins", sans-serif;
     overflow: hidden;
     height: 100vh;
+    cursor: none; /*fait disparaître le curseur de ma souris*/
 
 }
 
@@ -61,5 +62,22 @@ p {
     position: absolute;
     transform: translate(-50%, -50%);/*PERMET DE PARAMETRER THE MOUSE EXATEMENT AU BON ENDROIT*/
     pointer-events: none;
+    transition: all 0.5s ease;
+    transition-property: background,transform;
+    z-index: 2;
+    backdrop-filter: brightness(250%); /*EXPERIMENTAL*/
+}
+
+.link-grow {
+    transform: scale(1.5)translate(-25%, -25%);
+    background: #222;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.hovered-link {
+    color: white;
+    transition: 0.3s ease-out;
+    z-index: 3;
 }
 /*# sourceMappingURL=style.css.map */
